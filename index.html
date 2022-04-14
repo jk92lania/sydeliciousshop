@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+        <![endif]-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>삼양맛샵</title>
+    <script src="js/prefixfree.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="js/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 클론코드 관련 안내 -->
+    <div class="modal">
+        <div class="modal-wrap">
+            <img src="images/warning_icon.png" alt="경고" class="modal-warnig">
+            <b>
+                이 사이트는 스터디용으로 제작되었으며 리소스는 
+            </b>
+            <a href="https://sydeliciousshop.com/intro/adult_i.html?returnUrl=%2Findex.html" target="_blank" class="modal-origin">
+                원저작자
+                <img src="images/original.png" alt="원사이트">
+            </a>
+            <b>에게 있습니다.
+                본 사이트는 Chrome에 최적화 되어있습니다.</b>
+            <div class="modal-desc clearfix">
+                <p>제작 기간 : 10일</p>
+                <div class="modal-label-wrap">
+                    <span class="modal-label modal-html">html</span>                
+                    <span class="modal-label modal-css">css</span>                
+                    <span class="modal-label modal-js">js</span>                
+
+                </div>                
+            </div>
+            <div class="modal-close">닫기</div>
+        </div>
+    </div>
+
+
+    <div class="wrap">
+        <!-- 상단 -->
+        <header class="header">
+            <div class="header-top">
+                <div class="container">
+                    <a href="#" class="header-top-link">
+                        삼양맛샵 앱 업데이트하면 <span>쇼핑지원금의 행운이</span>!?
+                    </a>
+                </div>
+            </div>
+            <div class="header-middle">
+                <div class="container">
+                    <div class="login-menu">
+                        <ul class="login-menu-list clearfix">
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="logo">
+                        <img src="images/mh_logo.png" alt="삼양맛샵">
+                    </a>
+                    <div class="search-box">
+                        <div class="search-box-txt search-popular">
+                            <h3>인기검색어</h3>
+                            <ul class="search-history">
+                                <li><a href="#">#불닭</a></li>
+                                <li><a href="#">#불타는시리즈</a></li>
+                                <li><a href="#">#로제</a></li>
+                                <li><a href="#">#삼양라면</a></li>
+                                <li><a href="#">#비건</a></li>
+                                <li><a href="#">#뽀빠이</a></li>
+                                <li><a href="#">#치즈</a></li>
+                                <li><a href="#">#후추볶음면</a></li>
+                            </ul>
+                        </div>
+                        <div class="search-box-txt search-recent">
+                            <h3>최근검색어</h3>
+                            <span class="search-clear">모두 지우기</span>
+                        </div>
+                        <div class="search-box-close">
+                            <img src="images/sd_close.png" alt="close">
+                        </div>
+                    </div>
+                    <form class="search">
+                        <input type="text" class="search-txt" placeholder="검색어를 입력하세요.">
+                        <input type="submit" class="search-bt">
+                    </form>
+                    <ul class="user-list clearfix">
+                        <li><a href="#">
+                                <img src="images/mh_order.png" alt="주문목록">
+                            </a></li>
+                        <li><a href="#">
+                                <img src="images/mh_mypage.png" alt="나의계정">
+                            </a></li>
+                        <li><a href="#">
+                                <img src="images/mh_cart.png" alt="장바구니">
+                                <i class="cart-count">0</i>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <nav class="nav">
+                        <ul class="gnb clearfix">
+                            <li>
+                                <a href="#">
+                                    <img src="images/mh_fold.png" alt="mh_fold" class="gnb-fold">
+                                    삼양식품
+                                </a>
+                                <ul class="submenu">
+                                    <li><a href="#">불닭브랜드</a></li>
+                                    <li><a href="#">삼양브랜드</a></li>
+                                    <li><a href="#">라면</a></li>
+                                    <li><a href="#">소스</a></li>
+                                    <li><a href="#">스낵</a></li>
+                                    <li><a href="#">삼양목장</a></li>
+                                    <li><a href="#">간편식품</a></li>
+                                    <li><a href="#">냉동식품</a></li>
+                                    <li><a href="#">유제품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">맛샵pick</a>
+                                <ul class="submenu">
+                                    <li><a href="#">불타는시리즈</a></li>
+                                    <li><a href="#">맛샵 세트 모음</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">굿즈샵</a>
+                                <ul class="submenu">
+                                    <li><a href="#">불타는 시리즈</a></li>
+                                    <li><a href="#">온라인전용</a></li>
+                                    <li><a href="#">삼양굿즈</a></li>
+                                    <li><a href="#">불닭굿즈</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">이벤트</a>
+                                <ul class="submenu">
+                                    <li><a href="#">이벤트</a></li>
+                                    <li><a href="#">기획전</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">삼양플레이</a>
+                                <ul class="submenu">
+                                    <li><a href="#">페퍼Story</a></li>
+                                    <li><a href="#">삼양 Recipe</a></li>
+                                    <li><a href="#">삼양유니버스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="nav-bg"></div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- //상단 -->
+        <!-- 메인 -->
+        <div class="main">
+            <!-- 비주얼 -->
+            <section class="visual">
+                <div class="swiper-container sw-visual">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_220203.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_220205.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_220207.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_211227.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_211222.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_211216.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="images/main_211208.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination sw-visual-pg"></div>
+                    <button class="sw-visual-prev"></button>
+                    <button class="sw-visual-next"></button>
+                </div>
+                <div class="container">
+                </div>
+            </section>
+            <!-- //비주얼 -->
+            <!-- 신상품 -->
+            <section class="new">
+                <div class="container">
+                    <h2 class="title">
+                        <em>new arrival</em>
+                        늘 새롭게
+                        <strong>신상품</strong>
+                    </h2>
+                    <div class="new-list clearfix">
+                        <!-- 배경, 아이템이미지, 장바구니, 판매표시, 이름, 할인율, 가격, 할인전 가격 -->
+                        <div class="item-box mr-40">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0101.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 큰컵 삼양라면 매운맛 110g</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">13%</i>
+                                <span class="item-sale-after">1,040원</span>
+                                <em class="item-sale-before">1,200원</em>
+                            </p>
+                        </div>
+                        <div class="item-box mr-40">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0102.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion promosion-free"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 매콤한 게 좋아 세트 (발렌타인 데이)</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">83%</i>
+                                <span class="item-sale-after">10,900원</span>
+                                <em class="item-sale-before">13,400원</em>
+                            </p>
+                        </div>
+                        <div class="item-box mr-40">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0103.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 부셔먹는 라면스낵 불닭 90g x 4입</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">13%</i>
+                                <span class="item-sale-after">2,610원</span>
+                                <em class="item-sale-before">3,000원</em>
+                            </p>
+                        </div>
+                        <div class="item-box">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0104.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion promosion-set"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 삼양 베스트 봉지 4개</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">20%</i>
+                                <span class="item-sale-after">14,900원</span>
+                                <em class="item-sale-before">18,850원</em>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="new-banner">
+                        <img src="images/line_bn_220128.jpg" alt="배너">
+                    </div>
+                </div>
+            </section>
+            <!-- //신상품 -->
+            <!-- 베스트상품 -->
+            <section class="best">
+                <div class="container">
+                    <ul class="best-list clearfix">
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0101.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양식품] 흑당짱구 115g</a>
+                                <p class="item-price">
+                                    <i class="item-sale">40%</i>
+                                    <span class="item-sale-after">780원</span>
+                                    <em class="item-sale-before">1,300원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0102.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양식품] 로제불닭납작당면 169g</a>
+                                <p class="item-price">
+                                    <i class="item-sale">13%</i>
+                                    <span class="item-sale-after">3,040원</span>
+                                    <em class="item-sale-before">3,500원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0103.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양식품] 불닭 베스트 큰컵 8개</a>
+                                <p class="item-price">
+                                    <i class="item-sale">18%</i>
+                                    <span class="item-sale-after">9,900원</span>
+                                    <em class="item-sale-before">12,200원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0104.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양식품] 삼양 베스트 큰컵 8개</a>
+                                <p class="item-price">
+                                    <i class="item-sale">30%</i>
+                                    <span class="item-sale-after">7,560원</span>
+                                    <em class="item-sale-before">10,800원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="best-box">
+                                <h2 class="title">
+                                    <em>best item</em>
+                                    가장 많이 팔리는
+                                    <strong>베스트상품</strong>
+                                </h2>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0105.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양목장]우유로 만든 밀크전병 9g x 18입</a>
+                                <p class="item-price">
+                                    <i class="item-sale">5%</i>
+                                    <span class="item-sale-after">11,400원</span>
+                                    <em class="item-sale-before">12,000원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0106.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양맛샵] 불닭볶음면 140g x 5입</a>
+                                <p class="item-price">
+                                    <i class="item-sale">13%</i>
+                                    <span class="item-sale-after">5,000원</span>
+                                    <em class="item-sale-before">5,750원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0107.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양식품] 맛있는라면 비건 100g x 4입</a>
+                                <p class="item-price">
+                                    <i class="item-sale">13%</i>
+                                    <span class="item-sale-after">4,520원</span>
+                                    <em class="item-sale-before">5,200원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-box best-box">
+                                <span class="item-bg">
+                                    <a href="#" class="item-img"><img src="images/best_s0108.png" alt="상품"></a>
+                                    <span class="item-promosion"></span>
+                                </span>
+                                <a href="#" class="item-name">[삼양식품] 크림까르보불닭볶음면 140g x 4입</a>
+                                <p class="item-price">
+                                    <i class="item-sale">13%</i>
+                                    <span class="item-sale-after">5,560원</span>
+                                    <em class="item-sale-before">6,400원</em>
+                                </p>
+                                <a href="#" class="item-cart"></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="best-banner">
+                        <img src="images/line_bn_buldak_campaign.jpg" alt="배너" class="banner">
+                    </div>
+                </div>
+            </section>
+            <!-- //베스트상품 -->
+            <!-- 엠디픽 -->
+            <section class="pick">
+                <div class="container">
+                    <h2 class="title">
+                        <em>MD's pick</em>
+                        직원들이 픽! 했다!
+                        <strong>엠디픽</strong>
+                    </h2>
+                    <div class="pick-list clearfix">
+                        <div class="item-box mr-40">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0101.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 큰컵 삼양라면 매운맛 110g</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">13%</i>
+                                <span class="item-sale-after">1,040원</span>
+                                <em class="item-sale-before">1,200원</em>
+                            </p>
+                        </div>
+                        <div class="item-box mr-40">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0102.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion promosion-free"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 매콤한 게 좋아 세트 (발렌타인 데이)</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">83%</i>
+                                <span class="item-sale-after">10,900원</span>
+                                <em class="item-sale-before">13,400원</em>
+                            </p>
+                        </div>
+                        <div class="item-box mr-40">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0103.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 부셔먹는 라면스낵 불닭 90g x 4입</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">13%</i>
+                                <span class="item-sale-after">2,610원</span>
+                                <em class="item-sale-before">3,000원</em>
+                            </p>
+                        </div>
+                        <div class="item-box">
+                            <span class="item-bg">
+                                <a href="#" class="item-img"><img src="images/new_s0104.png" alt="상품"></a>
+                                <a href="#" class="item-cart"></a>
+                                <span class="item-promosion promosion-set"></span>
+                            </span>
+                            <a href="#" class="item-name mt-20">[삼양식품] 삼양 베스트 봉지 4개</a>
+                            <p class="item-price mt-10">
+                                <i class="item-sale">20%</i>
+                                <span class="item-sale-after">14,900원</span>
+                                <em class="item-sale-before">18,850원</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- //엠디픽 -->
+            <!-- 취향존중 -->
+            <section class="choose">
+                <div class="container">
+                    <div class="choose-title">
+                        <img src="images/choose_title.png" alt="help you choose">
+                    </div>
+                    <ul class="choose-cate clearfix">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="choose-list">
+                        <li class="on">
+                            <img src="images/choose_txt01.png" alt="취향존중">
+                            <ul class="choose-txt-list clearfix">
+                                <li><a href="#">든든함</a></li>
+                                <li><a href="#">간편함</a></li>
+                                <li><a href="#">독특함</a></li>
+                                <li><a href="#">혼술</a></li>
+                                <li><a href="#">여행</a></li>
+                                <li><a href="#">비건</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="images/choose_txt02.png" alt="맛존중">
+                            <ul class="choose-txt-list clearfix">
+                                <li><a href="#">매운맛</a></li>
+                                <li><a href="#">진한맛</a></li>
+                                <li><a href="#">외쿡맛</a></li>
+                                <li><a href="#">고소한맛</a></li>
+                                <li><a href="#">달콤한맛</a></li>
+                                <li><a href="#">바다의맛</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="choose-salt">
+                        <img src="images/choose_salt.png" alt="salt">
+                        <ul class="salt-glass clearfix">
+                            <li>
+                                <div>
+                                    <img src="images/salt_glass.png" alt="glass">
+                                    <img src="images/salt_glass.png" alt="glass">
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="images/salt_glass.png" alt="glass">
+                                    <img src="images/salt_glass.png" alt="glass">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+            <!-- //취향존중 -->
+            <!-- 페퍼스토리 -->
+            <section class="pepper">
+                <div class="container">
+                    <h2 class="title">
+                        <em>Pepper Story</em>
+                        페퍼와 솔트의
+                        <strong>일기</strong>
+                    </h2>
+                    <div class="pepper-list clearfix">
+                        <div class="pepper-left mr-40">
+                            <a href="#" class="pepper-link pepper-stroy-1">
+                                <div class="pepper-bg-color"></div>
+                                <span><i class="pepper-chapter">Ep.40</i><em class="pepper-title">
+                                        <겨울을 따뜻하게>
+                                    </em></span>
+                            </a>
+                        </div>
+                        <div class="pepper-right">
+                            <a href="#" class="pepper-link pepper-stroy-2 mb-40">
+                                <div class="pepper-bg-color"></div>
+                                <span><i class="pepper-chapter">Ep.39</i><em class="pepper-title">
+                                        <1살 배달 왔다옹~>
+                                    </em></span>
+
+                            </a>
+                            <a href="#" class="pepper-link pepper-stroy-3">
+                                <div class="pepper-bg-color"></div>
+                                <span><i class="pepper-chapter">Ep.38</i><em class="pepper-title">
+                                        <메리 페퍼 크리스마스>
+                                    </em></span>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pepper-more">
+                        <a href="#" class="more">
+                            <em>페퍼스토리</em>
+                            더보기 +
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- //페퍼스토리 -->
+            <!-- 브랜드스토리 -->
+            <section class="brand">
+
+                <div class="container">
+                    <h2 class="title">
+                        <em>Samyang Brand</em>
+                        <strong>브랜드스토리</strong>
+                    </h2>
+                </div>
+                <div class="swiper-container sw-brand">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">1963</h3>
+                            <img src="images/brand01.png" alt="상품" class="brand-item-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">1970</h3>
+                            <img src="images/brand02.png" alt="상품" class="brand-item-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">1972</h3>
+                            <img src="images/brand03.png" alt="상품" class="brand-item-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">1973</h3>
+                            <img src="images/brand04.png" alt="상품" class="brand-item-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">2012</h3>
+                            <img src="images/brand05.png" alt="상품" class="brand-item-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">2020</h3>
+                            <img src="images/brand06.png" alt="상품" class="brand-item-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <h3 class="brand-year">2021</h3>
+                            <img src="images/brand07.png" alt="상품" class="brand-item-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="brand-more">
+                        <a href="#" class="more">
+                            <em>브랜드스토리</em>
+                            더보기 +
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- //브랜드스토리 -->
+            <!-- 레시피 -->
+            <section class="recipe">
+                <div class="container">
+                    <h2 class="title">
+                        <em>Recipe</em>
+                        이렇게 즐겨보세요!
+                        <strong>레시피</strong>
+                    </h2>
+                    <div class="recipe-wrap">
+                        <div class="recipe-box">
+                            <div class="recipe-img">
+                                <img src="images/recipe_01.jpg" alt="레시피">
+                            </div>
+                            <div class="recipe-info">
+                                <em>난이도<img src="images/star_02.png" alt="난이도"></em>
+                                불닭방위대 불타는 레시PICK 23
+                                <strong>불닭방위대_간식 Time</strong>
+                            </div>
+                        </div>
+                        <div class="recipe-box">
+                            <div class="recipe-img">
+                                <img src="images/recipe_02.jpg" alt="레시피">
+                            </div>
+                            <div class="recipe-info">
+                                <em>난이도<img src="images/star_03.png" alt="난이도"></em>
+                                불닭방위대 불타는 레시PICK 23
+                                <strong>불닭방위대_한끼 Time</strong>
+                            </div>
+                        </div>
+                        <div class="recipe-box">
+                            <div class="recipe-img">
+                                <img src="images/recipe_03.jpg" alt="레시피">
+                            </div>
+                            <div class="recipe-info">
+                                <em>난이도<img src="images/star_02.png" alt="난이도"></em>
+                                불닭방위대 불타는 레시PICK 23
+                                <strong>불닭방위대_피크닉 Time</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="recipe-txt">우리 시대 라이프스타일과 식문화를 만들어내는 브랜드를 지향합니다.</span>
+                    <div class="recipe-more">
+                        <a href="#" class="more">
+                            <em>레시피</em>
+                            더보기 +
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- //레시피 -->
+            <!-- 이벤트 기획전 -->
+            <section class="event">
+                <div class="container">
+                    <h2 class="title">
+                        <strong>이벤트&기획전</strong>
+                    </h2>
+                    <ul class="event-list clearfix mt-50">
+                        <li class="mr-40">
+                            <div class="event-box">
+                                <div class="event-box-img">
+                                    <img src="images/event_01.jpg" alt="이벤트">
+                                </div>
+                                <span class="event-box-title mt-24">달콤♥매콤 발렌타인 데이 이벤트</span>
+                                <span class="event-box-day mt-10">2022.02.03~2022.02.14</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="event-box">
+                                <div class="event-box-img">
+                                    <img src="images/event_02.jpg" alt="이벤트">
+                                </div>
+                                <span class="event-box-title mt-24">[2월 기획전] 삼양라면 오리지널 VS 삼양라면 매운맛</span>
+                                <span class="event-box-day mt-10">2022.02.03~2022.02.28</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+            <!-- //이벤트 기획전 -->
+            <!-- 삼양tv -->
+            <section class="tv">
+                <div class="container">
+                    <h2 class="title">
+                        <strong>삼양 TV</strong>
+                    </h2>
+                    <div class="tv-vidio mt-50">
+                        <iframe width="1280" height="700" src="https://www.youtube.com/embed/-pMAHu9i180"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- //삼양tv -->
+        </div>
+        <!-- //메인 -->
+        <!-- 하단 -->
+        <footer class="footer">
+            <div class="footer-sns mb-40">
+                <div class="container">
+                    <ul class="f-sns-list clearfix">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-notice">
+                <div class="container">
+                    <ul class="f-notice-list">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#" class="f-privacy">개인정보처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-customer">
+                <div class="container clearfix">
+                    <div class="f-customer-left">
+                        <ul class="f-customer-list">
+                            <li>
+                                <strong>삼양맛샵 고객센터(주문/배송) 080.850.3072</strong>
+                                <span>평일 AM 9:30~PM 17:30 (점심시간 PM 11:00~12:30 / 주말, 공휴일 휴무)</span>
+                            </li>
+                            <li>
+                                <strong>삼양식품 고객지원센터(제품/품질) 080.940.3333</strong>
+                                <span>평일 AM 9:30~PM 17:30 (점심시간 12:00~13:00 / 주말, 공휴일 휴무)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="f-customer-right">
+                        <button>1:1문의</button>
+                        <button>고객센터</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <div class="container clearfix">
+                    <div class="f-bottom-left">
+                        삼양식품(주) <br>
+                        대표자 : 정태운,진종기 <br>
+                        개인정보책임자 : 삼양식품 이커머스 <br>
+                        주소 : 02737 서울특별시 성북구 오패산로3길 104 (하월곡동) 삼양식품 <br>
+                        이메일 : sydeliciousshop@samyangfoods.com <br>
+                        반품교환주소 : 경기도 하남시 서하남로487번길 45-35 (춘궁동) 성윤로지스 <br>
+                        사업자등록번호 102-81-05450
+                        <a href="#">[사업자정보확인]</a> | 통신판매업신고번호 [2016-서울성북-0790]
+                    </div>
+                    <div class="f-bottom-right">
+                        <ul>
+                            <li><img src="images/ucert_black.gif" alt=""></li>
+                            <li><img src="images/inipay.png" alt=""></li>
+                            <li><img src="images/escrow.png" alt=""></li>
+                        </ul>
+                        <span>Copyright &copy; 삼양맛샵 All Rights Reserved.</span>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        <!-- //하단 -->
+
+    </div>
+</body>
+
+</html>
