@@ -417,6 +417,20 @@ body {
 }
 
 
+@media all and (max-width: 1000px) {
+    .modal-wrap {
+        width: 100%;
+        padding: 20px 20px;
+    }    
+}
+@media all and (max-width: 480px) {
+    
+    .modal-desc {
+        font-size: 12px;
+        line-height: 15px;
+    }   
+}
+
 
 /* //클론코드 관련 안내 */ 
 
